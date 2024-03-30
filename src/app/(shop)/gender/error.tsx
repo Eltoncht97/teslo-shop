@@ -1,7 +1,8 @@
+"use client"
 import { PageNotFound } from '@/components';
 
 
-export default function ProductNotFound() {
+export default function GenderError() {
 
 
   return (
