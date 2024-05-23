@@ -27,7 +27,7 @@ export const OrderSummary = () => {
   }
 
   return (
-    <>
+    <div className="grid grid-cols-2">
       <span>No. Productos</span>
       <span className="text-right">
         {itemsInCart === 1 ? "1 artículo" : `${itemsInCart} artículos`}
@@ -41,6 +41,6 @@ export const OrderSummary = () => {
 
       <span className="mt-5 text-2xl">Total:</span>
       <span className="mt-5 text-2xl text-right">{currecyFormat(total)}</span>
-    </>
+    </div>
   );
 };
