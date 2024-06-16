@@ -9,7 +9,8 @@ Mi proyecto personal de una tienda virtual con un lado administrativo, etc , etc
 4. Levantar la base de datos ```docker compose up -d```
 5. Correr las migraciones de prisma ```npx prisma migrate dev```
 6. Ejecutar seed ```npm run seed```
-3. Correr el proyecto ```npm run dev```
+7. Correr el proyecto ```npm run dev```
+8. Purgar LocalStorage y SessionStorage en el navegador
 
 ## Correr en prod
 

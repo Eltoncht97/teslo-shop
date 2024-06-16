@@ -36,10 +36,12 @@ export const PaypalButton = ({ orderId, amount }: Props) => {
         {
           invoice_id: orderId,
           amount: {
+            currency_code: "USD",
             value: `${roundedAmount}`,
           },
         },
       ],
+      intent: "CAPTURE"
     });
 
     // console.log(transactionId);
@@ -61,5 +63,9 @@ export const PaypalButton = ({ orderId, amount }: Props) => {
     await paypalCheckPayment(details.id);
   };
 
-  return <PayPalButtons createOrder={createOrder} onApprove={onApprove} />;
+  return (
+    <div className="relative z-0">
+      <PayPalButtons createOrder={createOrder} onApprove={onApprove} />
+    </div>
+  );
 };
