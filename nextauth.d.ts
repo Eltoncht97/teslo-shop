@@ -5,7 +5,7 @@ declare module "next-auth" {
       id: string;
       name: string;
       email: string;
-      emailVeried: boolean;
+      emailVerified: boolean;
       role: string;
       image: string;
     } & DefaultSession["user"];

@@ -1,23 +1,22 @@
 import { Middleware } from "@/auth.config";
 import { Title } from "@/components";
 import { redirect } from "next/navigation";
+import { ProfileForm } from "./ui/ProfileForm";
 
 export default async function ProfilePage() {
-  const session = await Middleware()
+  const session = await Middleware();
 
-  if(!session?.user){
+  if (!session?.user) {
     // redirect('/auth/login?returnTo=/perfil')
-    redirect('/')
+    redirect("/");
   }
+
+  console.log({ user: session.user });
+
   return (
     <div>
-      <Title title="Perfil"/>
-      <pre>
-      {
-        JSON.stringify(session.user, null, 2)
-      }
-      </pre>
-      <h3 className="text-3xl mb-10">{session.user.role}</h3>
+      <Title title="Perfil" />
+      <ProfileForm user={session.user} />
     </div>
   );
 }
