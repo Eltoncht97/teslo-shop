@@ -85,7 +85,7 @@ export const ProfileForm = ({user}: Props) => {
           <input type="text" className="p-2 border rounded-md bg-gray-200" {...register("email", { required: true, min: 0 })} />
         </div>
 
-        <div className="flex flex-col mb-2">
+        {/* <div className="flex flex-col mb-2">
           <span>Foto</span>
           <input
             type="file"
@@ -93,9 +93,9 @@ export const ProfileForm = ({user}: Props) => {
             className="p-2 border rounded-md bg-gray-200"
             accept="image/png, image/jpeg, image/avif"
           />
-        </div>
+        </div> */}
 
-        <button className="btn-primary w-full">Guardar</button>
+        {/* <button className="btn-primary w-full">Guardar</button> */}
       </div>
     </form>
   );
